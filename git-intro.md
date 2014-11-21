@@ -31,6 +31,15 @@ date: 24th November 2014
     - Repository (on a remote server) can serve as backup.
 </div>
 
+## Using git {data-transition="none"}
+![](figure/git_single.png)
+
+## Using git {data-transition="none"}
+![](figure/git_remote.png)
+
+## Using git {data-transition="none"}
+![](figure/git_multi.png)
+
 # What is GitHub?
 
 # Using GitHub
