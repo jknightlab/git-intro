@@ -4,7 +4,7 @@ author: Peter Humburg
 date: 24th November 2014
 ---
 
-# Git. The what and why.
+# Git. The what and why. {#git}
 ## Why use version control?
 . . .
 
