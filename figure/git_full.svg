@@ -15,7 +15,7 @@
    version="1.1"
    inkscape:version="0.48.5 r10040"
    sodipodi:docname="git_full.svg"
-   inkscape:export-filename="/home/humburg/git/git-intro/figure/git_single.png"
+   inkscape:export-filename="/home/humburg/git/git-intro/figure/git_clone.png"
    inkscape:export-xdpi="180"
    inkscape:export-ydpi="180">
   <defs
@@ -152,10 +152,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.9755556"
-     inkscape:cx="372.04724"
+     inkscape:cx="341.67604"
      inkscape:cy="262.20471"
      inkscape:document-units="px"
-     inkscape:current-layer="svg2"
+     inkscape:current-layer="layer5"
      showgrid="false"
      inkscape:window-width="1871"
      inkscape:window-height="1176"
@@ -638,43 +638,6 @@
       </g>
     </g>
     <g
-       id="g5783">
-      <path
-         sodipodi:nodetypes="ccc"
-         inkscape:connector-curvature="0"
-         id="path4519"
-         d="m 80.011934,690.52474 0,-125.36902 150.340886,0"
-         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Mend)" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path4753"
-         d="m 231.88171,600.3202 -96.82972,1.01926 0,88.16602"
-         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Mend)"
-         sodipodi:nodetypes="ccc" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text4939"
-         y="658.33057"
-         x="31.520027"
-         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#4d4d4d;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-         xml:space="preserve"><tspan
-           y="658.33057"
-           x="31.520027"
-           id="tspan4941"
-           sodipodi:role="line">push</tspan></text>
-      <text
-         sodipodi:linespacing="125%"
-         id="text4943"
-         y="658.33057"
-         x="141.98535"
-         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#4d4d4d;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-         xml:space="preserve"><tspan
-           y="658.33057"
-           x="141.98535"
-           id="tspan4945"
-           sodipodi:role="line">pull</tspan></text>
-    </g>
-    <g
        transform="translate(431.1471,-1.0192645)"
        id="g4726-8">
       <rect
@@ -838,7 +801,118 @@
              y="783.12335">commit</tspan></text>
       </g>
     </g>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="256.34396"
+       y="514.72644"
+       id="text3283"
+       sodipodi:linespacing="125%"
+       transform="translate(0,527.95272)"><tspan
+         sodipodi:role="line"
+         id="tspan3285"
+         x="256.34396"
+         y="514.72644" /></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="Multi user 1"
+     style="display:inline">
     <g
+       transform="translate(0,-527.95272)"
+       style="display:inline"
+       id="g4640">
+      <path
+         transform="translate(0,527.95272)"
+         inkscape:connector-curvature="0"
+         id="path3388"
+         d="m 231.32733,56.186705 -127.55905,0 0,103.262095"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker5746)" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4610"
+         y="641.77246"
+         x="50.778404"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+         xml:space="preserve"><tspan
+           style="fill:#666666"
+           y="641.77246"
+           x="50.778404"
+           id="tspan4612"
+           sodipodi:role="line">clone</tspan></text>
+    </g>
+    <g
+       transform="translate(0,-527.95272)"
+       style="display:inline"
+       id="g4635">
+      <path
+         transform="translate(0,527.95272)"
+         inkscape:connector-curvature="0"
+         id="path4410"
+         d="m 411.52981,52.643398 116.92913,0 0,104.780652"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker5746)" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4610-2"
+         y="641.77246"
+         x="533.34088"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial;-inkscape-font-specification:Arial"
+         xml:space="preserve"><tspan
+           style="fill:#666666"
+           y="641.77246"
+           x="533.34088"
+           id="tspan4612-1"
+           sodipodi:role="line">clone</tspan></text>
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="Multi user 2"
+     style="display:none">
+    <g
+       transform="translate(0,-527.95272)"
+       style="display:inline"
+       id="g5783">
+      <path
+         sodipodi:nodetypes="ccc"
+         inkscape:connector-curvature="0"
+         id="path4519"
+         d="m 80.011934,690.52474 0,-125.36902 150.340886,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Mend)" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4753"
+         d="m 231.88171,600.3202 -96.82972,1.01926 0,88.16602"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Mend)"
+         sodipodi:nodetypes="ccc" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4939"
+         y="658.33057"
+         x="31.520027"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#4d4d4d;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+         xml:space="preserve"><tspan
+           y="658.33057"
+           x="31.520027"
+           id="tspan4941"
+           sodipodi:role="line">push</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4943"
+         y="658.33057"
+         x="141.98535"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#4d4d4d;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+         xml:space="preserve"><tspan
+           y="658.33057"
+           x="141.98535"
+           id="tspan4945"
+           sodipodi:role="line">pull</tspan></text>
+    </g>
+    <g
+       transform="translate(0,-527.95272)"
+       style="display:inline"
        id="g6226">
       <path
          transform="translate(0,527.95272)"
@@ -876,17 +950,5 @@
            x="577.20129"
            y="658.32971">pull</tspan></text>
     </g>
-    <text
-       xml:space="preserve"
-       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-       x="256.34396"
-       y="514.72644"
-       id="text3283"
-       sodipodi:linespacing="125%"
-       transform="translate(0,527.95272)"><tspan
-         sodipodi:role="line"
-         id="tspan3285"
-         x="256.34396"
-         y="514.72644" /></text>
   </g>
 </svg>
