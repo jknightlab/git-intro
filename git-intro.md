@@ -38,6 +38,9 @@ date: 24th November 2014
 ![](figure/git_remote.png)
 
 ## Using git {data-transition="none"}
+![](figure/git_clone.png)
+
+## Using git {data-transition="none"}
 ![](figure/git_multi.png)
 
 # What is GitHub?
