@@ -21,3 +21,11 @@ h1.title { font-size: 4em; }
 .longquote blockquote { font-size: 0.8em; } 
 .reveal blockquote:before { content: ''; } 
 .reveal blockquote:after { content: ''; } 
+.left {
+	float: left;
+	width: 48%;
+}
+.right {
+	float: right;
+	width: 48%;
+}
