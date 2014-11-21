@@ -44,5 +44,29 @@ date: 24th November 2014
 ![](figure/git_multi.png)
 
 # What is GitHub?
+## Cloud storage
+GitHub hosts git repositories.
+![](figure/github_single.png)
+Great backup for source code and other documents.
+
+## Web interface
+<div class="left">
+![](figure/github_web.png)
+</div>
+<div class="right">
+* Manage repositories
+    - create/delete repositories and files
+    - edit files
+* Browse commit history
+    - examine changes to files
+    - even images!
+* Host documentation
+    - Wiki
+    - Static web page
+* Issue tracker
+</div>
+
+## Social network
+![](figure/github_multi.png)
 
 # Using GitHub
