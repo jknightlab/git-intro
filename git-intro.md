@@ -95,6 +95,8 @@ Great backup for source code and other documents.
 ## Create a repository
 ![](figure/new_repo.png)
 
+## Create a new branch
+
 ## Clone it {data-transition="none"}
 Two ways to access repositories on GitHub
 
@@ -152,6 +154,20 @@ Two ways to access repositories on GitHub
     * If private keys are password protected this has to be entered for each `push`,
       `pull` or `fetch` command.
     * [Can use `ssh-agent` to take care of passwords](#ssh-agent-setup). 
+
+## Switch branches
+
+## Add a file
+
+## Commit and push
+
+## Pull
+
+## Playing with the data
+
+## Merging
+
+## History and diffs
 
 # Summary
 ## Common git commands
