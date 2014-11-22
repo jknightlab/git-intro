@@ -87,5 +87,30 @@ Great backup for source code and other documents.
  
 `git pull`
   ~ Get latest version of files from remote repository and merge them with the local copies.
+  
+`git status`
+  ~ Show status of files in working directory relative to index.
 
+## Managing branches
+`git branch`
+  ~ Create a new branch or list existing branches. Can also delete local or remote branches 
+    (<span class="alert">may want to merge into another branch first</span>).
+  
+`git checkout`
+  ~ Switch to a different branch.
+
+`git merge`
+  ~ Merge two branches.
+  
+## More git commands
+`git rm`
+  ~ Delete files from index and working directory.
+  
+`git reset`
+  ~ Reset index and working directory to a previous commit.
+  
+`git stash`
+  ~ Temporarily undo changes that you don't want to commit immediately.
+  
+  
 # Useful resources
