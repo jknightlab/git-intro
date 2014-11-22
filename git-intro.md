@@ -114,3 +114,15 @@ Great backup for source code and other documents.
   
   
 # Useful resources
+## Git and GitHub tutorials
+* GitHub for Beginners [part 1](http://readwrite.com/2013/09/30/understanding-github-a-journey-for-beginners-part-1) and [part 2](http://readwrite.com/2013/10/02/github-for-beginners-part-2)
+* [Git: Your new best friend](http://www.sitepoint.com/version-control-git/)
+* [Git for Scientists](http://nyuccl.org/pages/GitTutorial/)
+* [Interactive online tutorial](https://try.github.io/levels/1/challenges/1)
+* GitHub [bootcamp](https://help.github.com/categories/bootcamp/)
+* [Tutorials from Atlassian](https://www.atlassian.com/git/tutorials/)
+
+## Other Git resources
+* [Git documentation](http://git-scm.com/) including [installation instructions](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+* [GitHub workflow](https://guides.github.com/introduction/flow/index.html) explained.
+* Comparison of git [workflows](https://www.atlassian.com/git/tutorials/comparing-workflows).
