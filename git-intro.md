@@ -90,6 +90,63 @@ Great backup for source code and other documents.
 ## Create a repository
 ![](figure/new_repo.png)
 
+## Clone it {data-transition="none"}
+Two ways to access repositories on GitHub
+
+#. HTTPS
+    
+    ```{.bash}
+    git clone https://github.com/jknightlab/git-tutorial.git
+    ```
+
+#. SSH
+    
+    ```{.bash}
+    git clone git@github.com:jknightlab/git-tutorial.git
+    ```
+    
+## Clone it {data-transition="none"}
+Two ways to access repositories on GitHub
+
+#. HTTPS
+    
+    ```{.bash}
+    git clone https://github.com/jknightlab/git-tutorial.git
+    ```
+    
+    * No additional setup required
+    * Works from behind firewalls/proxies
+    * Requires user name and password for every `push`, `pull` or `fetch`
+    * Git can do this for you
+        
+        ```{.bash} 
+        git config --global credential.helper cache
+        ```
+#. SSH
+    
+    ```{.bash}
+    git clone git@github.com:jknightlab/git-tutorial.git
+    ```
+    
+## Clone it {data-transition="none"}
+Two ways to access repositories on GitHub
+
+#. HTTPS
+    
+    ```{.bash}
+    git clone https://github.com/jknightlab/git-tutorial.git
+    ```
+
+#. SSH
+    
+    ```{.bash}
+    git clone git@github.com:jknightlab/git-tutorial.git
+    ```
+    
+    * Need to generate and deploy SSH keys
+    * If private keys are password protected this has to be entered for each `push`,
+      `pull` or `fetch` command.
+    * [Can use `ssh-agent` to take care of passwords](#ssh-agent-setup). 
 
 # Summary
 ## Common git commands
@@ -147,3 +204,34 @@ Great backup for source code and other documents.
 * GitHub GUI for [Windows](https://windows.github.com/) and [Mac](https://mac.github.com/)
 * [GitHub workflow](https://guides.github.com/introduction/flow/index.html) explained.
 * Comparison of git [workflows](https://www.atlassian.com/git/tutorials/comparing-workflows).
+
+# Appendix
+## Setting up ssh agent {#ssh-agent-setup}
+If working on a Linux machine that isn't automatically starting an ssh-agent instance
+this can be achieved by adding the following code to `.profile`
+
+```{.bash}
+SSH_ENV="$HOME/.ssh/environment"
+
+function start_agent {
+    echo "Initialising new SSH agent..."
+    /usr/bin/ssh-agent -s | sed 's/^echo/#echo/' > "${SSH_ENV}"
+    echo succeeded
+    chmod 600 "${SSH_ENV}"
+    . "${SSH_ENV}" > /dev/null
+    /usr/bin/ssh-add;
+}
+
+# Source SSH settings, if applicable
+
+if [ -f "${SSH_ENV}" ]; then
+    . "${SSH_ENV}" > /dev/null
+    ps -ef | grep ${SSH_AGENT_PID} | grep "$(whoami).*ssh-agent\s" > /dev/null || {
+        start_agent;
+    }
+else
+    start_agent;
+fi
+```
+
+The ssh passphrase then only needs to be entered once when the ssh agent is started.
