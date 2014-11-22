@@ -74,6 +74,8 @@ Great backup for source code and other documents.
 ![](figure/github_multi.png)
 
 # Using GitHub
+## Create a repository
+![](figure/new_repo.png)
 
 
 # Summary
