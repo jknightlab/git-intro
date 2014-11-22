@@ -144,5 +144,6 @@ Great backup for source code and other documents.
 
 ## Other Git resources
 * [Git documentation](http://git-scm.com/) including [installation instructions](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+* GitHub GUI for [Windows](https://windows.github.com/) and [Mac](https://mac.github.com/)
 * [GitHub workflow](https://guides.github.com/introduction/flow/index.html) explained.
 * Comparison of git [workflows](https://www.atlassian.com/git/tutorials/comparing-workflows).
