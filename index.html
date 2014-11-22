@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Peter Humburg" />
+  <title>A brief introduction to git and GitHub</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="reveal.js/css/reveal.min.css"/>
+    <style type="text/css">code{white-space: pre;}</style>
+    <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+    </style>
+    <link rel="stylesheet" href="slides.css"/>
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+      if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+      }
+    </script>
+    <!--[if lt IE 9]>
+    <script src="reveal.js/lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title">A brief introduction to git and GitHub</h1>
+    <h2 class="author">Peter Humburg</h2>
+    <h3 class="date">24th November 2014</h3>
+</section>
+<section id="TOC">
+<h1>Overview</h1>
+<ul>
+<li><a href="#/git">Git. The what and why.</a></li>
+<li><a href="#/what-is-github">What is GitHub?</a></li>
+<li><a href="#/using-github">Using GitHub</a></li>
+<li><a href="#/summary">Summary</a></li>
+<li><a href="#/useful-resources">Useful resources</a></li>
+<li><a href="#/appendix">Appendix</a></li>
+</ul>
+</section>
+
+<section><section id="git" class="titleslide slide level1"><h1>Git. The what and why.</h1></section><section id="why-use-version-control" class="slide level2">
+<h1>Why use version control?</h1>
+<div class="fragment">
+<ul>
+<li>Keeping track of changes</li>
+<li>Collaborate</li>
+<li>Maintain multiple versions</li>
+<li>Understand what happened</li>
+<li>Recover previous versions</li>
+<li>Backup source code</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Keeping track of changes
+<ul>
+<li>Record changes as they happen.</li>
+<li>Complete version history.</li>
+</ul></li>
+<li>Collaborate
+<ul>
+<li>Multiple people can edit the same file without overwriting each others changes.</li>
+<li>Get an overview of who changed what.</li>
+</ul></li>
+<li>Maintain multiple versions
+<ul>
+<li>Branching allows several versions of code to coexist.</li>
+<li>Can integrate changes from different branches.</li>
+</ul></li>
+<li>Understand what happened
+<ul>
+<li>Each change comes with a (hopefully) useful description.</li>
+<li>Did something break? Identify the change that caused the problem.</li>
+</ul></li>
+<li>Recover previous versions
+<ul>
+<li>Can return to any version.</li>
+<li>Did something break? Just restore the last working version.</li>
+</ul></li>
+<li>Backup
+<ul>
+<li>Repository (on a remote server) can serve as backup for source code.</li>
+</ul></li>
+</ul>
+</aside>
+</div>
+</section><section id="using-git" class="slide level2" data-transition="none">
+<h1>Using git</h1>
+<figure>
+<img src="figure/git_single.png" />
+</figure>
+</section><section id="using-git-1" class="slide level2" data-transition="none">
+<h1>Using git</h1>
+<figure>
+<img src="figure/git_remote.png" />
+</figure>
+</section><section id="using-git-2" class="slide level2" data-transition="none">
+<h1>Using git</h1>
+<figure>
+<img src="figure/git_clone.png" />
+</figure>
+</section><section id="using-git-3" class="slide level2" data-transition="none">
+<h1>Using git</h1>
+<figure>
+<img src="figure/git_multi.png" />
+</figure>
+</section><section id="using-branches" class="slide level2">
+<h1>Using branches</h1>
+<figure>
+<img src="figure/branches.png" />
+</figure>
+<ul>
+<li>Can maintain several parallel versions.</li>
+<li>Use one branch for the latest stable version (master).</li>
+<li>Other branches for development.</li>
+<li>Changes to one branch will not interfere with use of other branches.</li>
+<li>Different <a href="#/other-git-resources">workflows</a> use branches in variety of ways.</li>
+</ul>
+</section></section>
+<section><section id="what-is-github" class="titleslide slide level1"><h1>What is GitHub?</h1></section><section id="cloud-storage" class="slide level2">
+<h1>Cloud storage</h1>
+<p>GitHub hosts git repositories. <img src="figure/github_single.png" /> Great backup for source code and other documents.</p>
+</section><section id="web-interface" class="slide level2">
+<h1>Web interface</h1>
+<div class="left">
+<img src="figure/github_web.png" />
+</div>
+<div class="right">
+<ul>
+<li>Manage repositories
+<ul>
+<li>create/delete repositories and files</li>
+<li>edit files</li>
+</ul></li>
+<li>Browse commit history
+<ul>
+<li>examine changes to files</li>
+<li>even images!</li>
+</ul></li>
+<li>Host documentation
+<ul>
+<li>Wiki</li>
+<li>Static web page</li>
+</ul></li>
+<li>Issue tracker</li>
+</ul>
+</div>
+</section><section id="social-network" class="slide level2">
+<h1>Social network</h1>
+<figure>
+<img src="figure/github_multi.png" />
+</figure>
+<div class="left">
+<ul>
+<li>Share code, analyses, documents, ...</li>
+<li>Discuss (issue tracker)</li>
+</ul>
+</div>
+<div class="right">
+<ul>
+<li>Contribute (fork and pull requests)</li>
+<li>Follow other users</li>
+</ul>
+</div>
+</section></section>
+<section><section id="using-github" class="titleslide slide level1"><h1>Using GitHub</h1></section><section id="create-a-repository" class="slide level2">
+<h1>Create a repository</h1>
+<figure>
+<img src="figure/new_repo.png" />
+</figure>
+</section><section id="create-a-new-branch" class="slide level2">
+<h1>Create a new branch</h1>
+</section><section id="clone-it" class="slide level2" data-transition="none">
+<h1>Clone it</h1>
+<p>Two ways to access repositories on GitHub</p>
+<ol>
+<li><p>HTTPS</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> clone https://github.com/jknightlab/git-tutorial.git</code></pre></li>
+<li><p>SSH</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> clone git@github.com:jknightlab/git-tutorial.git</code></pre></li>
+</ol>
+</section><section id="clone-it-1" class="slide level2" data-transition="none">
+<h1>Clone it</h1>
+<p>Two ways to access repositories on GitHub</p>
+<ol>
+<li><p>HTTPS</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> clone https://github.com/jknightlab/git-tutorial.git</code></pre>
+<ul>
+<li>No additional setup required</li>
+<li>Works from behind firewalls/proxies</li>
+<li>Requires user name and password for every <code>push</code>, <code>pull</code> or <code>fetch</code></li>
+<li><p>Git can do this for you</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> config --global credential.helper cache</code></pre></li>
+</ul></li>
+<li><p>SSH</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> clone git@github.com:jknightlab/git-tutorial.git</code></pre></li>
+</ol>
+</section><section id="clone-it-2" class="slide level2" data-transition="none">
+<h1>Clone it</h1>
+<p>Two ways to access repositories on GitHub</p>
+<ol>
+<li><p>HTTPS</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> clone https://github.com/jknightlab/git-tutorial.git</code></pre></li>
+<li><p>SSH</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> clone git@github.com:jknightlab/git-tutorial.git</code></pre>
+<ul>
+<li>Need to generate and deploy SSH keys</li>
+<li>If private keys are password protected this has to be entered for each <code>push</code>, <code>pull</code> or <code>fetch</code> command.</li>
+<li><a href="#/ssh-agent-setup">Can use <code>ssh-agent</code> to take care of passwords</a>.</li>
+</ul></li>
+</ol>
+</section><section id="switch-branches" class="slide level2">
+<h1>Switch branches</h1>
+</section><section id="add-a-file" class="slide level2">
+<h1>Add a file</h1>
+</section><section id="commit-and-push" class="slide level2">
+<h1>Commit and push</h1>
+</section><section id="pull" class="slide level2">
+<h1>Pull</h1>
+</section><section id="playing-with-the-data" class="slide level2">
+<h1>Playing with the data</h1>
+</section><section id="merging" class="slide level2">
+<h1>Merging</h1>
+</section><section id="history-and-diffs" class="slide level2">
+<h1>History and diffs</h1>
+</section></section>
+<section><section id="summary" class="titleslide slide level1"><h1>Summary</h1></section><section id="common-git-commands" class="slide level2">
+<h1>Common git commands</h1>
+<dl>
+<dt><code>git clone</code></dt>
+<dd>Create a copy of a remote repository.
+</dd>
+<dt><code>git add</code></dt>
+<dd>Stage new or changed files for the next commit.
+</dd>
+<dt><code>git commit</code></dt>
+<dd>Commit a change set to the local repository.
+</dd>
+<dt><code>git push</code></dt>
+<dd>Push committed changes to the remote repository.
+</dd>
+<dt><code>git pull</code></dt>
+<dd>Get latest version of files from remote repository and merge them with the local copies.
+</dd>
+<dt><code>git status</code></dt>
+<dd>Show status of files in working directory relative to index.
+</dd>
+</dl>
+</section><section id="managing-branches" class="slide level2">
+<h1>Managing branches</h1>
+<dl>
+<dt><code>git branch</code></dt>
+<dd>Create a new branch or list existing branches. Can also delete local or remote branches (<span class="alert">may want to merge into another branch first</span>).
+</dd>
+<dt><code>git checkout</code></dt>
+<dd>Switch to a different branch.
+</dd>
+<dt><code>git merge</code></dt>
+<dd>Merge two branches.
+</dd>
+</dl>
+</section><section id="more-git-commands" class="slide level2">
+<h1>More git commands</h1>
+<dl>
+<dt><code>git rm</code></dt>
+<dd>Delete files from index and working directory.
+</dd>
+<dt><code>git reset</code></dt>
+<dd>Reset index and working directory to a previous commit.
+</dd>
+<dt><code>git stash</code></dt>
+<dd>Temporarily undo changes that you don't want to commit immediately.
+</dd>
+</dl>
+</section></section>
+<section><section id="useful-resources" class="titleslide slide level1"><h1>Useful resources</h1></section><section id="git-and-github-tutorials" class="slide level2">
+<h1>Git and GitHub tutorials</h1>
+<ul>
+<li>GitHub for Beginners <a href="http://readwrite.com/2013/09/30/understanding-github-a-journey-for-beginners-part-1">part 1</a> and <a href="http://readwrite.com/2013/10/02/github-for-beginners-part-2">part 2</a></li>
+<li><a href="http://www.sitepoint.com/version-control-git/">Git: Your new best friend</a></li>
+<li><a href="http://nyuccl.org/pages/GitTutorial/">Git for Scientists</a></li>
+<li><a href="https://try.github.io/levels/1/challenges/1">Interactive online tutorial</a></li>
+<li>GitHub <a href="https://help.github.com/categories/bootcamp/">bootcamp</a></li>
+<li><a href="https://www.atlassian.com/git/tutorials/">Tutorials from Atlassian</a></li>
+</ul>
+</section><section id="other-git-resources" class="slide level2">
+<h1>Other Git resources</h1>
+<ul>
+<li><a href="http://git-scm.com/">Git documentation</a> including <a href="http://git-scm.com/book/en/v2/Getting-Started-Installing-Git">installation instructions</a></li>
+<li>GitHub GUI for <a href="https://windows.github.com/">Windows</a> and <a href="https://mac.github.com/">Mac</a></li>
+<li><a href="https://guides.github.com/introduction/flow/index.html">GitHub workflow</a> explained.</li>
+<li>Comparison of git <a href="https://www.atlassian.com/git/tutorials/comparing-workflows">workflows</a>.</li>
+</ul>
+</section></section>
+<section><section id="appendix" class="titleslide slide level1"><h1>Appendix</h1></section><section id="ssh-agent-setup" class="slide level2">
+<h1>Setting up ssh agent</h1>
+<p>If working on a Linux machine that isn't automatically starting an ssh-agent instance this can be achieved by adding the following code to <code>.profile</code></p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="ot">SSH_ENV=</span><span class="st">&quot;</span><span class="ot">$HOME</span><span class="st">/.ssh/environment&quot;</span>
+
+<span class="kw">function</span><span class="fu"> start_agent</span> <span class="kw">{</span>
+    <span class="kw">echo</span> <span class="st">&quot;Initialising new SSH agent...&quot;</span>
+    <span class="kw">/usr/bin/ssh-agent</span> -s <span class="kw">|</span> <span class="kw">sed</span> <span class="st">&#39;s/^echo/#echo/&#39;</span> <span class="kw">&gt;</span> <span class="st">&quot;</span><span class="ot">${SSH_ENV}</span><span class="st">&quot;</span>
+    <span class="kw">echo</span> succeeded
+    <span class="kw">chmod</span> 600 <span class="st">&quot;</span><span class="ot">${SSH_ENV}</span><span class="st">&quot;</span>
+    <span class="kw">.</span> <span class="st">&quot;</span><span class="ot">${SSH_ENV}</span><span class="st">&quot;</span> <span class="kw">&gt;</span> <span class="kw">/dev/null</span>
+    <span class="kw">/usr/bin/ssh-add</span>;
+<span class="kw">}</span>
+
+<span class="co"># Source SSH settings, if applicable</span>
+
+<span class="kw">if [</span> <span class="ot">-f</span> <span class="st">&quot;</span><span class="ot">${SSH_ENV}</span><span class="st">&quot;</span><span class="kw"> ]</span>; <span class="kw">then</span>
+    <span class="kw">.</span> <span class="st">&quot;</span><span class="ot">${SSH_ENV}</span><span class="st">&quot;</span> <span class="kw">&gt;</span> <span class="kw">/dev/null</span>
+    <span class="kw">ps</span> -ef <span class="kw">|</span> <span class="kw">grep</span> <span class="ot">${SSH_AGENT_PID}</span> <span class="kw">|</span> <span class="kw">grep</span> <span class="st">&quot;</span><span class="ot">$(</span><span class="kw">whoami</span><span class="ot">)</span><span class="st">.*ssh-agent\s&quot;</span> <span class="kw">&gt;</span> /dev/null <span class="kw">||</span> <span class="kw">{</span>
+        <span class="kw">start_agent;</span>
+    <span class="kw">}</span>
+<span class="kw">else</span>
+    <span class="kw">start_agent;</span>
+<span class="kw">fi</span></code></pre>
+<p>The ssh passphrase then only needs to be entered once when the ssh agent is started.</p>
+</section></section>
+    </div>
+  </div>
+
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.min.js"></script>
+
+  <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+//          { src: 'reveal.js/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; }, }
+//          { src: 'reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+]});
+    </script>
+    </body>
+</html>
