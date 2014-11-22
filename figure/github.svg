@@ -15,7 +15,7 @@
    version="1.1"
    inkscape:version="0.48.5 r10040"
    sodipodi:docname="github.svg"
-   inkscape:export-filename="/home/humburg/git/git-intro/figure/github_multi.png"
+   inkscape:export-filename="/home/humburg/git/git-intro/figure/github_single.png"
    inkscape:export-xdpi="180"
    inkscape:export-ydpi="180">
   <defs
@@ -769,7 +769,7 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="Multiple accounts"
-     style="display:inline"
+     style="display:none"
      class="fragment"
      data-fragment-index="1"
      transform="translate(-44.708785,-12.741715)">
