@@ -47,6 +47,15 @@ date: 24th November 2014
 ## Using git {data-transition="none"}
 ![](figure/git_multi.png)
 
+## Using branches
+![](figure/branches.png)
+
+* Can maintain several parallel versions.
+* Use one branch for the latest stable version (master).
+* Other branches for development.
+* Changes to one branch will not interfere with use of other branches.
+* Different [workflows](#other-git-resources) use branches in variety of ways.
+
 # What is GitHub?
 ## Cloud storage
 GitHub hosts git repositories.
