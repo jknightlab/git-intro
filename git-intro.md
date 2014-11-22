@@ -82,9 +82,14 @@ Great backup for source code and other documents.
 ## Social network
 ![](figure/github_multi.png)
 
-* Contribute (fork and pull requests)
+<div class="left">
+* Share code, analyses, documents, ...
 * Discuss (issue tracker)
+</div>
+<div class="right">
+* Contribute (fork and pull requests)
 * Follow other users
+</div>
 
 # Using GitHub
 ## Create a repository
