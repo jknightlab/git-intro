@@ -29,7 +29,9 @@ h1.title { font-size: 4em; }
 	float: right;
 	width: 48%;
 }
-
+.alert {
+	color: #FF3300;
+}
 .reveal dl{
 	text-align: left;
 }
