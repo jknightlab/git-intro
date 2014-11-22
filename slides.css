@@ -37,4 +37,6 @@ h1.title { font-size: 4em; }
 }
 .reveal dd{
 	text-indent: 50px;
+	margin-left: 50px;
+	margin-bottom: 0.25em;
 }
