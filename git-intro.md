@@ -10,9 +10,10 @@ date: 24th November 2014
 
 * Keeping track of changes
 * Collaborate
+* Maintain multiple versions
 * Understand what happened
 * Recover previous versions
-* Backup
+* Backup source code
 
 <div class="notes">
 * Keeping track of changes
@@ -21,6 +22,9 @@ date: 24th November 2014
 * Collaborate
     - Multiple people can edit the same file without overwriting each others changes.
     - Get an overview of who changed what.
+* Maintain multiple versions
+    - Branching allows several versions of code to coexist.
+    - Can integrate changes from different branches. 
 * Understand what happened
     - Each change comes with a (hopefully) useful description.
     - Did something break? Identify the change that caused the problem.
@@ -28,7 +32,7 @@ date: 24th November 2014
     - Can return to any version.
     - Did something break? Just restore the last working version.
 * Backup
-    - Repository (on a remote server) can serve as backup.
+    - Repository (on a remote server) can serve as backup for source code.
 </div>
 
 ## Using git {data-transition="none"}
@@ -70,6 +74,7 @@ Great backup for source code and other documents.
 ![](figure/github_multi.png)
 
 # Using GitHub
+
 
 # Summary
 ## Common git commands
