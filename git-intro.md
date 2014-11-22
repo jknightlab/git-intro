@@ -70,3 +70,22 @@ Great backup for source code and other documents.
 ![](figure/github_multi.png)
 
 # Using GitHub
+
+# Summary
+## Common git commands
+`git clone`
+  ~ Create a copy of a remote repository.
+  
+`git add`
+  ~ Stage new or changed files for the next commit.
+  
+`git commit`
+  ~ Commit a change set to the local repository.
+  
+`git push`
+  ~ Push committed changes to the remote repository.
+ 
+`git pull`
+  ~ Get latest version of files from remote repository and merge them with the local copies.
+
+# Useful resources
