@@ -29,3 +29,10 @@ h1.title { font-size: 4em; }
 	float: right;
 	width: 48%;
 }
+
+.reveal dl{
+	text-align: left;
+}
+.reveal dd{
+	text-indent: 50px;
+}
