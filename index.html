@@ -194,8 +194,20 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <figure>
 <img src="figure/new_repo.png" />
 </figure>
+<aside class="notes">
+<p>Create a new repo on GitHub and call it <code>git-tutorial</code>.</p>
+<p>Make sure it is initialised with a README.</p>
+Quickly show how files (in this case the README) can be edited on the website.
+</aside>
 </section><section id="create-a-new-branch" class="slide level2">
 <h1>Create a new branch</h1>
+<figure>
+<img src="figure/new_branch.png" />
+</figure>
+<aside class="notes">
+<p>Create a new branch called <code>data-collection</code></p>
+We will use this to add a few files and process them.
+</aside>
 </section><section id="clone-it" class="slide level2" data-transition="none">
 <h1>Clone it</h1>
 <p>Two ways to access repositories on GitHub</p>
@@ -216,11 +228,14 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li>Works from behind firewalls/proxies</li>
 <li>Requires user name and password for every <code>push</code>, <code>pull</code> or <code>fetch</code></li>
 <li><p>Git can do this for you</p>
-<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> config --global credential.helper cache</code></pre></li>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> config --global credential.helper <span class="st">&#39;cache --timeout=36000&#39;</span></code></pre></li>
 </ul></li>
 <li><p>SSH</p>
 <pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> clone git@github.com:jknightlab/git-tutorial.git</code></pre></li>
 </ol>
+<aside class="notes">
+Should probably use HTTPS for now.
+</aside>
 </section><section id="clone-it-2" class="slide level2" data-transition="none">
 <h1>Clone it</h1>
 <p>Two ways to access repositories on GitHub</p>
@@ -235,20 +250,198 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li><a href="#/ssh-agent-setup">Can use <code>ssh-agent</code> to take care of passwords</a>.</li>
 </ul></li>
 </ol>
+<aside class="notes">
+Don't forget to change into the newly created directory after cloning.
+</aside>
+</section><section id="configure-the-repository" class="slide level2">
+<h1>Configure the repository</h1>
+<p>Tell git your name and email address. These will be used to attribute commits.</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> config --global user.name <span class="kw">&lt;</span>your name<span class="kw">&gt;</span>
+<span class="kw">git</span> config --global user.email <span class="kw">&lt;</span>your email<span class="kw">&gt;</span></code></pre>
+<div class="fragment">
+<p>If you are working on Windows also set this option</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> config --global core.autocrlf true</code></pre>
+<aside class="notes">
+<p>It is best to get the basic configuration done and out of the way before launching into any actual work.</p>
+<p>Depending on the setup user name and/or email may be populated properly already.</p>
+Also make sure git is converting line endings on Windows (but not on Mac/Linux).
+</aside>
+</div>
 </section><section id="switch-branches" class="slide level2">
 <h1>Switch branches</h1>
+<p>Currently we are using the <code>master</code> branch.</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> status</code></pre>
+<div class="fragment">
+<p>List all existing branches</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> branch -a</code></pre>
+</div>
+<div class="fragment">
+<p>Switch to <code>data-collection</code> branch</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> checkout data-collection</code></pre>
+<aside class="notes">
+Could have changed the default branch on GitHub to <code>data-collection</code> instead.
+</aside>
+</div>
 </section><section id="add-a-file" class="slide level2">
 <h1>Add a file</h1>
+<p>Create a new file (using your favourite text editor).</p>
+<div class="fragment">
+<p>We now have an untracked file in our repository.</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> status</code></pre>
+</div>
+<div class="fragment">
+<p>Add the file to the staging area</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> add <span class="kw">&lt;</span>your file<span class="kw">&gt;</span></code></pre>
+<aside class="notes">
+<p>Call the file &quot;<your name>.txt&quot; and store a single number in it.</p>
+Run <code>git status</code> after each step to see how the file is recognised by git.
+</aside>
+</div>
 </section><section id="commit-and-push" class="slide level2">
 <h1>Commit and push</h1>
+<p>Time to commit all staged changes (don't forget to add a descriptive commit message)</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> commit -m <span class="st">&quot;Added file with very important information&quot;</span></code></pre>
+<div class="fragment">
+<p>Now we can push the new files to GitHub</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> push</code></pre>
+<aside class="notes">
+<p>It is now time to add the new files to our local repository before pushing them to GitHub.</p>
+<p>Again, use <code>git status</code> to see the status change after each step.</p>
+After files have been pushed to GitHub, go to the website to see them appear there.
+</aside>
+</div>
 </section><section id="pull" class="slide level2">
 <h1>Pull</h1>
+<p>Before doing anything else, make sure your local repository is up to date.</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> pull</code></pre>
+<aside class="notes">
+This should distribute the files created earlier to everyone.
+</aside>
 </section><section id="playing-with-the-data" class="slide level2">
 <h1>Playing with the data</h1>
-</section><section id="merging" class="slide level2">
-<h1>Merging</h1>
+<p>Create a new branch (off the <code>data-collection</code> branch).</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> checkout -b analysis</code></pre>
+<div class="fragment">
+<p>Combine all the data (in R) ...</p>
+<pre class="sourceCode r"><code class="sourceCode r">files &lt;-<span class="st"> </span><span class="kw">dir</span>(<span class="dt">pattern=</span><span class="st">&quot;.txt&quot;</span>)
+data &lt;-<span class="st"> </span><span class="kw">lapply</span>(files, read.table)
+data &lt;-<span class="st"> </span><span class="kw">do.call</span>(rbind, data)
+<span class="kw">names</span>(data) &lt;-<span class="st"> &quot;value&quot;</span>
+names &lt;-<span class="st"> </span><span class="kw">lapply</span>(files, strsplit, <span class="st">&quot;.&quot;</span>, <span class="dt">fixed=</span><span class="ot">TRUE</span>)
+data$name &lt;-<span class="st"> </span><span class="kw">sapply</span>(names, sapply, <span class="st">&quot;[[&quot;</span>, <span class="dv">1</span>)
+<span class="kw">write.table</span>(data, <span class="dt">file=</span><span class="st">&quot;combined.tab&quot;</span>, <span class="dt">row.names=</span><span class="ot">FALSE</span>)</code></pre>
+</div>
+<div class="fragment">
+<p>and add it to the repository.</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> add combined.tab
+<span class="kw">git</span> rm *.txt
+<span class="kw">git</span> commit -m <span class="st">&quot;Combined data into single file&quot;</span></code></pre>
+<aside class="notes">
+Create a sub-directory and place the R code in a file in it. Don't forget to add it to the index.
+</aside>
+</div>
+</section><section id="pushing-the-new-branch-to-github" class="slide level2">
+<h1>Pushing the new branch to GitHub</h1>
+<p>When pushing a new branch for the first time we need to tell git where it should go.</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> push --set-upstream origin analysis</code></pre>
+</section><section id="more-fun-with-data" class="slide level2">
+<h1>More fun with data</h1>
+<p>Let's plot the data</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
+data &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;combined.tab&quot;</span>, <span class="dt">header=</span><span class="ot">TRUE</span>)
+data$rank &lt;-<span class="st"> </span><span class="kw">order</span>(data$value)
+<span class="kw">ggplot</span>(data, <span class="kw">aes</span>(<span class="dt">y=</span>value, <span class="dt">x=</span>rank)) +<span class="st"> </span><span class="kw">geom_point</span>() +<span class="st"> </span><span class="kw">theme_bw</span>()
+<span class="kw">ggsave</span>(<span class="st">&quot;figure/combined.png&quot;</span>)</code></pre>
+<div class="fragment">
+<p>and add the plot to the repository.</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> add figure/combined.png
+<span class="kw">git</span> commit -m <span class="st">&quot;added plot of data&quot;</span>
+<span class="kw">git</span> push</code></pre>
+<aside class="notes">
+<p>Again, the R code should go into file and be added to the repo.</p>
+<p>Make sure the output directory for the figure exists.</p>
+After pushing the plot back to GitHub it may be a good opportunity to show what things look like now.
+</aside>
+</div>
+</section><section id="the-fun-continues" class="slide level2">
+<h1>The fun continues</h1>
+<p>Maybe that plot could be improved?</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(data, <span class="kw">aes</span>(<span class="dt">y=</span>value, <span class="dt">x=</span>rank)) +<span class="st"> </span><span class="kw">geom_point</span>() +<span class="st"> </span>
+<span class="st">        </span><span class="kw">geom_text</span>(<span class="kw">aes</span>(<span class="dt">label=</span>name), <span class="dt">hjust=</span><span class="dv">0</span>, <span class="dt">vjust=</span><span class="dv">0</span>) +<span class="st"> </span>
+<span class="st">        </span><span class="kw">theme_bw</span>()</code></pre>
+<div class="fragment">
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> add figure/combined.png
+<span class="kw">git</span> commit -m <span class="st">&quot;Added labels to data points.&quot;</span>
+<span class="kw">git</span> push</code></pre>
+<aside class="notes">
+Replace the plotting command in the script created earlier and re-run.
+</aside>
+</div>
+</section><section id="merging-on-github" class="slide level2">
+<h1>Merging on GitHub</h1>
+<div class="left">
+<img src="figure/github_merge.png" />
+</div>
+<div class="right">
+<p>Can merge branches on GitHub (if there are no conflicts).</p>
+<ol>
+<li>Create pull request for branch that should be merged</li>
+<li>Approve pull request and merge</li>
+<li><em>Delete merged branch</em></li>
+</ol>
+</div>
+<aside class="notes">
+Merge <code>analysis</code> into <code>data-collection</code>. Make sure to delete <code>analysis</code> at the end so that the next slide makes sense.
+</aside>
+</section><section id="clean-up" class="slide level2">
+<h1>Clean-up</h1>
+<p>Branches that have been deleted on GitHub still exist in the local repository. Best to clean them up.</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> pull
+<span class="kw">git</span> branch --merged <span class="kw">|</span> <span class="kw">grep</span> -v <span class="st">&quot;\*&quot;</span> <span class="kw">|</span> <span class="kw">grep</span> -v master <span class="kw">|</span> <span class="kw">xargs</span> -n 1 git branch -d
+<span class="kw">git</span> pull --prune</code></pre>
+<aside class="notes">
+<p>This identifies all local branches that have been deleted on the remote (i.e. GitHub) and deletes them.</p>
+The prune command then removes all remote tracking branches that no longer exist.
+</aside>
+</section><section id="local-merge" class="slide level2">
+<h1>Local merge</h1>
+<p>Can always merge locally and then push to GitHub.</p>
+<p>Here we merge <code>data-collection</code> into <code>master</code></p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> checkout master
+<span class="kw">git</span> merge data-collection</code></pre>
+<div class="fragment">
+<p>and then delete the local branch and push everything to GitHub</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> branch -d data-collection
+<span class="kw">git</span> push</code></pre>
+</div>
+<div class="fragment">
+<p>Finally, delete the remote branch as well.</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> push origin --delete data-collection</code></pre>
+</div>
 </section><section id="history-and-diffs" class="slide level2">
 <h1>History and diffs</h1>
+<div class="left">
+<img src="figure/history.png" />
+</div>
+<div class="right">
+<p>GitHub provides many ways to explore the history of a project.</p>
+<ol>
+<li>Network graph</li>
+<li>View all changes made by a commit</li>
+<li>View history of individual files</li>
+<li>See who made changes to a file</li>
+</ol>
+</div>
+<aside class="notes">
+<p>Illustrate these on GitHub. Start with the network graph (should have come up earlier anyway).</p>
+<p>Click on a node in the graph to get details of the commit.</p>
+<p>Look at the history of a file, compare two commits to see the changes.</p>
+<p>Make sure to show the image diff:</p>
+<ol>
+<li>Find the commit SHA for the first version of the plot and copy it.</li>
+<li>Go to the compare view for the repository and set the base to the SHA.</li>
+</ol>
+</aside>
 </section></section>
 <section><section id="summary" class="titleslide slide level1"><h1>Summary</h1></section><section id="common-git-commands" class="slide level2">
 <h1>Common git commands</h1>
@@ -316,6 +509,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li>GitHub GUI for <a href="https://windows.github.com/">Windows</a> and <a href="https://mac.github.com/">Mac</a></li>
 <li><a href="https://guides.github.com/introduction/flow/index.html">GitHub workflow</a> explained.</li>
 <li>Comparison of git <a href="https://www.atlassian.com/git/tutorials/comparing-workflows">workflows</a>.</li>
+<li>Detailed description of git <a href="http://git-scm.com/book/zh/v2/Customizing-Git-Git-Configuration">configuration</a>.</li>
 </ul>
 </section></section>
 <section><section id="appendix" class="titleslide slide level1"><h1>Appendix</h1></section><section id="ssh-agent-setup" class="slide level2">
