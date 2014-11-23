@@ -1,5 +1,5 @@
 ---
-title: A brief introduction to git and GitHub
+title: A brief introduction to Git and GitHub
 author: Peter Humburg
 date: 24th November 2014
 ---
@@ -35,16 +35,16 @@ date: 24th November 2014
     - Repository (on a remote server) can serve as backup for source code.
 </div>
 
-## Using git {data-transition="none"}
+## Using Git {data-transition="none"}
 ![](figure/git_single.png)
 
-## Using git {data-transition="none"}
+## Using Git {data-transition="none"}
 ![](figure/git_remote.png)
 
-## Using git {data-transition="none"}
+## Using Git {data-transition="none"}
 ![](figure/git_clone.png)
 
-## Using git {data-transition="none"}
+## Using Git {data-transition="none"}
 ![](figure/git_multi.png)
 
 ## Using branches
@@ -58,7 +58,7 @@ date: 24th November 2014
 
 # What is GitHub?
 ## Cloud storage
-GitHub hosts git repositories.
+GitHub hosts Git repositories.
 ![](figure/github_single.png)
 Great backup for source code and other documents.
 
@@ -181,7 +181,7 @@ Don't forget to change into the newly created directory after cloning.
 
 ## Configure the repository
 
-Tell git your name and email address. These will be used to attribute 
+Tell Git your name and email address. These will be used to attribute 
 commits.
 
 ```{.bash}
@@ -203,7 +203,7 @@ launching into any actual work.
 
 Depending on the setup user name and/or email may be populated properly already.
 
-Also make sure git is converting line endings on Windows (but not on Mac/Linux).
+Also make sure Git is converting line endings on Windows (but not on Mac/Linux).
 </div>
 
 
@@ -255,7 +255,7 @@ git add <your file>
 <div class="notes">
 Call the file "<your name>.txt" and store a single number in it.
 
-Run `git status` after each step to see how the file is recognised by git.
+Run `git status` after each step to see how the file is recognised by Git.
 </div>
 
 
@@ -333,7 +333,7 @@ Don't forget to add it to the index.
 </div>
 
 ## Pushing the new branch to GitHub
-When pushing a new branch for the first time we need to tell git where it should go.
+When pushing a new branch for the first time we need to tell Git where it should go.
 
 ```{.bash}
 git push --set-upstream origin analysis
@@ -478,7 +478,7 @@ Make sure to show the image diff:
 </div>
 
 # Summary
-## Common git commands
+## Common Git commands
 `git clone`
   ~ Create a copy of a remote repository.
   
@@ -508,7 +508,7 @@ Make sure to show the image diff:
 `git merge`
   ~ Merge two branches.
   
-## More git commands
+## More Git commands
 `git rm`
   ~ Delete files from index and working directory.
   
@@ -532,8 +532,8 @@ Make sure to show the image diff:
 * [Git documentation](http://git-scm.com/) including [installation instructions](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 * GitHub GUI for [Windows](https://windows.github.com/) and [Mac](https://mac.github.com/)
 * [GitHub workflow](https://guides.github.com/introduction/flow/index.html) explained.
-* Comparison of git [workflows](https://www.atlassian.com/git/tutorials/comparing-workflows).
-* Detailed description of git [configuration](http://git-scm.com/book/zh/v2/Customizing-Git-Git-Configuration).
+* Comparison of Git [workflows](https://www.atlassian.com/git/tutorials/comparing-workflows).
+* Detailed description of Git [configuration](http://git-scm.com/book/zh/v2/Customizing-Git-Git-Configuration).
 
 # Appendix
 ## Setting up ssh agent {#ssh-agent-setup}
