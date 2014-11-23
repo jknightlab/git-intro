@@ -95,7 +95,13 @@ Great backup for source code and other documents.
 ## Create a repository
 ![](figure/new_repo.png)
 
+<div class="notes">
+Create a new repo on GitHub and call it `git-tutorial`.
+Make sure it is initialised with a README.
+</div>
+
 ## Create a new branch
+
 
 ## Clone it {data-transition="none"}
 Two ways to access repositories on GitHub
