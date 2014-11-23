@@ -389,9 +389,69 @@ git push
 Replace the plotting command in the script created earlier and re-run. 
 </div>
 
-## Merging
+## Merging on GitHub
+<div class="left">
+![](figure/github_merge.png)
+</div>
+<div class="right">
+Can merge branches on GitHub (if there are no conflicts).
+
+#. Create pull request for branch that should be merged
+#. Approve pull request and merge
+#. *Delete merged branch*
+</div>
+
+<div class="notes">
+Merge `analysis` into `data-collection`.
+Make sure to delete `analysis` at the end so that the next slide makes sense.
+</div>
+
+## Clean-up
+
+Branches that have been deleted on GitHub still exist in the local repository.
+Best to clean them up.
+
+```{.bash}
+git pull
+git branch --merged | grep -v "\*" | grep -v master | xargs -n 1 git branch -d
+git pull --prune
+```
+
+<div class="notes">
+This identifies all local branches that have been deleted on the remote (i.e. GitHub)
+and deletes them. 
+
+The prune command then removes all remote tracking branches that no longer exist. 
+</div>
+
+## Local merge
+Can always merge locally and then push to GitHub.
+
+Here we merge `data-collection` into `master`
+```{.bash}
+git checkout master
+git merge data-collection
+```
+. . .
+
+and then delete the local branch and push everything to GitHub
+
+```{.bash}
+git branch -d data-collection
+git push
+```
+
+. . .
+
+Finally, delete the remote branch as well.
+
+```{.bash}
+git push origin --delete data-collection
+```
+
 
 ## History and diffs
+
 
 <div class="notes">
 Go to the website and show the image diff:
