@@ -97,11 +97,20 @@ Great backup for source code and other documents.
 
 <div class="notes">
 Create a new repo on GitHub and call it `git-tutorial`.
+
 Make sure it is initialised with a README.
+
+Quickly show how files (in this case the README) can be edited on the website.
 </div>
 
 ## Create a new branch
+![](figure/new_branch.png)
 
+<div class="notes">
+Create a new branch called `data-collection`
+
+We will use this to add a few files and process them.
+</div>
 
 ## Clone it {data-transition="none"}
 Two ways to access repositories on GitHub
@@ -190,6 +199,31 @@ Also make sure git is converting line endings on Windows (but not on Mac/Linux).
 
 
 ## Switch branches
+Currently we are using the `master` branch.
+
+```{.bash}
+git status
+```
+
+. . .
+
+List all existing branches
+
+```{.bash}
+git branch -a
+```
+
+. . .
+
+Switch to `data-collection` branch
+
+```{.bash}
+git checkout data-collection
+```
+
+<div class="notes">
+Could have changed the default branch on GitHub to `data-collection` instead.
+</div>
 
 ## Add a file
 
