@@ -155,6 +155,34 @@ Two ways to access repositories on GitHub
       `pull` or `fetch` command.
     * [Can use `ssh-agent` to take care of passwords](#ssh-agent-setup). 
 
+## Configure the repository
+
+Tell git your name and email address. These will be used to attribute 
+commits.
+
+```{.bash}
+git config --global user.name <your name>
+git config --global user.email <your email>
+```
+
+. . .
+
+If you are working on Windows also set this option
+
+```{.bash}
+git config --global core.autocrlf true
+```
+
+<div class="notes">
+It is best to get the basic configuration done and out of the way before
+launching into any actual work.
+
+Depending on the setup user name and/or email may be populated properly already.
+
+Also make sure git is converting line endings on Windows (but not on Mac/Linux).
+</div>
+
+
 ## Switch branches
 
 ## Add a file
@@ -225,6 +253,7 @@ Two ways to access repositories on GitHub
 * GitHub GUI for [Windows](https://windows.github.com/) and [Mac](https://mac.github.com/)
 * [GitHub workflow](https://guides.github.com/introduction/flow/index.html) explained.
 * Comparison of git [workflows](https://www.atlassian.com/git/tutorials/comparing-workflows).
+* Detailed description of git [configuration](http://git-scm.com/book/zh/v2/Customizing-Git-Git-Configuration).
 
 # Appendix
 ## Setting up ssh agent {#ssh-agent-setup}
