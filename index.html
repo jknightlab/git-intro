@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="Peter Humburg" />
-  <title>A brief introduction to git and GitHub</title>
+  <title>A brief introduction to Git and GitHub</title>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -49,7 +49,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
     <div class="slides">
 
 <section>
-    <h1 class="title">A brief introduction to git and GitHub</h1>
+    <h1 class="title">A brief introduction to Git and GitHub</h1>
     <h2 class="author">Peter Humburg</h2>
     <h3 class="date">24th November 2014</h3>
 </section>
@@ -111,22 +111,22 @@ code > span.er { color: #ff0000; font-weight: bold; }
 </aside>
 </div>
 </section><section id="using-git" class="slide level2" data-transition="none">
-<h1>Using git</h1>
+<h1>Using Git</h1>
 <figure>
 <img src="figure/git_single.png" />
 </figure>
 </section><section id="using-git-1" class="slide level2" data-transition="none">
-<h1>Using git</h1>
+<h1>Using Git</h1>
 <figure>
 <img src="figure/git_remote.png" />
 </figure>
 </section><section id="using-git-2" class="slide level2" data-transition="none">
-<h1>Using git</h1>
+<h1>Using Git</h1>
 <figure>
 <img src="figure/git_clone.png" />
 </figure>
 </section><section id="using-git-3" class="slide level2" data-transition="none">
-<h1>Using git</h1>
+<h1>Using Git</h1>
 <figure>
 <img src="figure/git_multi.png" />
 </figure>
@@ -145,7 +145,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 </section></section>
 <section><section id="what-is-github" class="titleslide slide level1"><h1>What is GitHub?</h1></section><section id="cloud-storage" class="slide level2">
 <h1>Cloud storage</h1>
-<p>GitHub hosts git repositories. <img src="figure/github_single.png" /> Great backup for source code and other documents.</p>
+<p>GitHub hosts Git repositories. <img src="figure/github_single.png" /> Great backup for source code and other documents.</p>
 </section><section id="web-interface" class="slide level2">
 <h1>Web interface</h1>
 <div class="left">
@@ -255,7 +255,7 @@ Don't forget to change into the newly created directory after cloning.
 </aside>
 </section><section id="configure-the-repository" class="slide level2">
 <h1>Configure the repository</h1>
-<p>Tell git your name and email address. These will be used to attribute commits.</p>
+<p>Tell Git your name and email address. These will be used to attribute commits.</p>
 <pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> config --global user.name <span class="kw">&lt;</span>your name<span class="kw">&gt;</span>
 <span class="kw">git</span> config --global user.email <span class="kw">&lt;</span>your email<span class="kw">&gt;</span></code></pre>
 <div class="fragment">
@@ -264,7 +264,7 @@ Don't forget to change into the newly created directory after cloning.
 <aside class="notes">
 <p>It is best to get the basic configuration done and out of the way before launching into any actual work.</p>
 <p>Depending on the setup user name and/or email may be populated properly already.</p>
-Also make sure git is converting line endings on Windows (but not on Mac/Linux).
+Also make sure Git is converting line endings on Windows (but not on Mac/Linux).
 </aside>
 </div>
 </section><section id="switch-branches" class="slide level2">
@@ -294,7 +294,7 @@ Could have changed the default branch on GitHub to <code>data-collection</code> 
 <pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> add <span class="kw">&lt;</span>your file<span class="kw">&gt;</span></code></pre>
 <aside class="notes">
 <p>Call the file &quot;<your name>.txt&quot; and store a single number in it.</p>
-Run <code>git status</code> after each step to see how the file is recognised by git.
+Run <code>git status</code> after each step to see how the file is recognised by Git.
 </aside>
 </div>
 </section><section id="commit-and-push" class="slide level2">
@@ -342,7 +342,7 @@ Create a sub-directory and place the R code in a file in it. Don't forget to add
 </div>
 </section><section id="pushing-the-new-branch-to-github" class="slide level2">
 <h1>Pushing the new branch to GitHub</h1>
-<p>When pushing a new branch for the first time we need to tell git where it should go.</p>
+<p>When pushing a new branch for the first time we need to tell Git where it should go.</p>
 <pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> push --set-upstream origin analysis</code></pre>
 </section><section id="more-fun-with-data" class="slide level2">
 <h1>More fun with data</h1>
@@ -444,7 +444,7 @@ The prune command then removes all remote tracking branches that no longer exist
 </aside>
 </section></section>
 <section><section id="summary" class="titleslide slide level1"><h1>Summary</h1></section><section id="common-git-commands" class="slide level2">
-<h1>Common git commands</h1>
+<h1>Common Git commands</h1>
 <dl>
 <dt><code>git clone</code></dt>
 <dd>Create a copy of a remote repository.
@@ -479,7 +479,7 @@ The prune command then removes all remote tracking branches that no longer exist
 </dd>
 </dl>
 </section><section id="more-git-commands" class="slide level2">
-<h1>More git commands</h1>
+<h1>More Git commands</h1>
 <dl>
 <dt><code>git rm</code></dt>
 <dd>Delete files from index and working directory.
@@ -508,8 +508,8 @@ The prune command then removes all remote tracking branches that no longer exist
 <li><a href="http://git-scm.com/">Git documentation</a> including <a href="http://git-scm.com/book/en/v2/Getting-Started-Installing-Git">installation instructions</a></li>
 <li>GitHub GUI for <a href="https://windows.github.com/">Windows</a> and <a href="https://mac.github.com/">Mac</a></li>
 <li><a href="https://guides.github.com/introduction/flow/index.html">GitHub workflow</a> explained.</li>
-<li>Comparison of git <a href="https://www.atlassian.com/git/tutorials/comparing-workflows">workflows</a>.</li>
-<li>Detailed description of git <a href="http://git-scm.com/book/zh/v2/Customizing-Git-Git-Configuration">configuration</a>.</li>
+<li>Comparison of Git <a href="https://www.atlassian.com/git/tutorials/comparing-workflows">workflows</a>.</li>
+<li>Detailed description of Git <a href="http://git-scm.com/book/zh/v2/Customizing-Git-Git-Configuration">configuration</a>.</li>
 </ul>
 </section></section>
 <section><section id="appendix" class="titleslide slide level1"><h1>Appendix</h1></section><section id="ssh-agent-setup" class="slide level2">
