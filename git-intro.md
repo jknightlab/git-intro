@@ -149,7 +149,11 @@ Two ways to access repositories on GitHub
     ```{.bash}
     git clone git@github.com:jknightlab/git-tutorial.git
     ```
-    
+
+<div class="notes">
+Should probably use HTTPS for now.
+</div>
+
 ## Clone it {data-transition="none"}
 Two ways to access repositories on GitHub
 
@@ -169,6 +173,11 @@ Two ways to access repositories on GitHub
     * If private keys are password protected this has to be entered for each `push`,
       `pull` or `fetch` command.
     * [Can use `ssh-agent` to take care of passwords](#ssh-agent-setup). 
+
+<div class="notes">
+Don't forget to change into the newly created directory after cloning.
+</div>
+
 
 ## Configure the repository
 
