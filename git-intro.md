@@ -142,7 +142,7 @@ Two ways to access repositories on GitHub
     * Git can do this for you
         
         ```{.bash} 
-        git config --global credential.helper cache
+        git config --global credential.helper 'cache --timeout=36000'
         ```
 #. SSH
     
@@ -297,10 +297,108 @@ This should distribute the files created earlier to everyone.
 
 
 ## Playing with the data
+Create a new branch (off the `data-collection` branch).
+
+```{.bash}
+git checkout -b analysis
+```
+
+. . .
+
+Combine all the data (in R) ...
+
+```{.r}
+files <- dir(pattern=".txt")
+data <- lapply(files, read.table)
+data <- do.call(rbind, data)
+names(data) <- "value"
+names <- lapply(files, strsplit, ".", fixed=TRUE)
+data$name <- sapply(names, sapply, "[[", 1)
+write.table(data, file="combined.tab", row.names=FALSE)
+``` 
+
+. . .
+
+and add it to the repository.
+
+```{.bash}
+git add combined.tab
+git rm *.txt
+git commit -m "Combined data into single file"
+```
+
+<div class="notes">
+Create a sub-directory and place the R code in a file in it. 
+Don't forget to add it to the index.
+</div>
+
+## Pushing the new branch to GitHub
+When pushing a new branch for the first time we need to tell git where it should go.
+
+```{.bash}
+git push --set-upstream origin analysis
+``` 
+
+## More fun with data
+Let's plot the data
+
+```{.r}
+library(ggplot2)
+data <- read.table("combined.tab", header=TRUE)
+data$rank <- order(data$value)
+ggplot(data, aes(y=value, x=rank)) + geom_point() + theme_bw()
+ggsave("figure/combined.png")
+```
+
+. . .
+
+and add the plot to the repository.
+
+```{.bash}
+git add figure/combined.png
+git commit -m "added plot of data"
+git push
+```
+<div class="notes">
+Again, the R code should go into file and be added to the repo.
+
+Make sure the output directory for the figure exists.
+
+After pushing the plot back to GitHub it may be a good opportunity to show what 
+things look like now.
+</div>
+
+## The fun continues
+Maybe that plot could be improved?
+
+```{.r}
+ggplot(data, aes(y=value, x=rank)) + geom_point() + 
+		geom_text(aes(label=name), hjust=0, vjust=0) + 
+		theme_bw()
+```
+
+. . .
+
+```{.bash}
+git add figure/combined.png
+git commit -m "Added labels to data points."
+git push
+```
+
+<div class="notes">
+Replace the plotting command in the script created earlier and re-run. 
+</div>
 
 ## Merging
 
 ## History and diffs
+
+<div class="notes">
+Go to the website and show the image diff:
+
+#. Find the commit SHA for the first version of the plot and copy it.
+#. Go to the compare view for the repository and set the base to the SHA.
+</div>
 
 # Summary
 ## Common git commands
