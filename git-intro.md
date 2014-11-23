@@ -451,10 +451,27 @@ git push origin --delete data-collection
 
 
 ## History and diffs
+<div class="left">
+![](figure/history.png)
+</div>
+<div class="right">
+GitHub provides many ways to explore the history of a project.
 
+#. Network graph
+#. View all changes made by a commit
+#. View history of individual files
+#. See who made changes to a file
+</div>
 
 <div class="notes">
-Go to the website and show the image diff:
+Illustrate these on GitHub. Start with the network graph 
+(should have come up earlier anyway).
+
+Click on a node in the graph to get details of the commit.
+
+Look at the history of a file, compare two commits to see the changes.
+
+Make sure to show the image diff:
 
 #. Find the commit SHA for the first version of the plot and copy it.
 #. Go to the compare view for the repository and set the base to the SHA.
