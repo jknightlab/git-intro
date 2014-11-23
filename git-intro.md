@@ -226,8 +226,54 @@ Could have changed the default branch on GitHub to `data-collection` instead.
 </div>
 
 ## Add a file
+Create a new file (using your favourite text editor).
+
+. . .
+
+We now have an untracked file in our repository.
+
+```{.bash}
+git status
+```
+. . .
+
+Add the file to the staging area
+
+```{.bash}
+git add <your file>
+```
+
+<div class="notes">
+Call the file "<your name>.txt" and store a single number in it.
+
+Run `git status` after each step to see how the file is recognised by git.
+</div>
+
 
 ## Commit and push
+Time to commit all staged changes (don't forget to add a descriptive commit message)
+
+```{.bash}
+git commit -m "Added file with very important information"
+```
+
+. . .
+
+Now we can push the new files to GitHub
+
+```{.bash}
+git push
+```
+
+<div class="notes">
+It is now time to add the new files to our local repository before pushing them to 
+GitHub.
+
+Again, use `git status` to see the status change after each step.
+
+After files have been pushed to GitHub, go to the website to see them appear there.
+</div>
+
 
 ## Pull
 
