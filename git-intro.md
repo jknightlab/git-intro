@@ -60,7 +60,8 @@ date: 24th November 2014
 ## Cloud storage
 GitHub hosts Git repositories.
 ![](figure/github_single.png)
-Great backup for source code and other documents.
+Great backup for source code and other documents 
+(like [this presentation](http://jknightlab.github.io/git-intro/)).
 
 ## Web interface
 <div class="left">
