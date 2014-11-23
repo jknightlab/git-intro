@@ -276,6 +276,16 @@ After files have been pushed to GitHub, go to the website to see them appear the
 
 
 ## Pull
+Before doing anything else, make sure your local repository is up to date.
+
+```{.bash}
+git pull
+```
+
+<div class="notes">
+This should distribute the files created earlier to everyone.
+</div>
+
 
 ## Playing with the data
 
